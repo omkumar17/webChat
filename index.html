@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
+    <script src="client.js" defer></script>
+    <style>
+        .msgContainer::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <!-- Messages Container -->
+    <div
+        class="msgContainer w-full max-w-lg h-[60vh] overflow-y-auto  bg-white border border-gray-300 rounded-lg shadow-md p-4 mb-4 scrollbar-none">
+        <!-- Messages will appear here dynamically -->
+    </div>
+
+    <!-- Form Container -->
+    <form id="form-container" class="flex w-full max-w-lg">
+        <input id="messageInp" type="text" placeholder="Type a message" required
+            class="flex-grow p-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <button type="submit" class="p-2 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600 transition duration-200">
+            Send
+        </button>
+    </form>
+    
+</body>
+
+</html>
